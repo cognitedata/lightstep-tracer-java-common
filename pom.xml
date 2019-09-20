@@ -7,7 +7,7 @@
     <groupId>com.lightstep.tracer.cognite</groupId>
     <artifactId>java</artifactId>
     <packaging>pom</packaging>
-    <version>0.18.0</version>
+    <version>0.18.0-SNAPSHOT</version>
 
     <name>LightStep Tracer Java Common (parent)</name>
     <description>LightStep Tracer Java Common (parent)</description>
@@ -32,18 +32,26 @@
             <email>hello@lightstep.com</email>
         </developer>
     </developers>
-
+    
     <scm>
-        <connection>https://github.com/lightstep/lightstep-tracer-java-common</connection>
-        <developerConnection>https://github.com/lightstep/lightstep-tracer-java-common</developerConnection>
-        <url>https://github.com/lightstep/lightstep-tracer-java-common</url>
+        <connection>scm:git:ssh://git@github.com:cognitedata/lightstep-tracer-java-common.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:cognitedata/lightstep-tracer-java-common.git</developerConnection>
+        <url>https://github.com/cognitedata/lightstep-tracer-java-common</url>
     </scm>
 
     <distributionManagement>
-        <repository>
+<snapshotRepository>
+    <id>cognite.jfrog.io</id>
+    <name>Cognite maven snapshots</name>
+    <url>https://cognite.jfrog.io/cognite/libs-snapshot-local</url>
+  </snapshotRepository>
+
+<!--    
+	    <repository>
             <id>lightstep-bintray</id>
             <url>https://api.bintray.com/maven/lightstep/maven/java-common/;publish=1</url>
-        </repository>
+    </repository>
+-->
     </distributionManagement>
 
     <properties>
